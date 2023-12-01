@@ -10,11 +10,9 @@ function puzzle1() {
 	for (let i = 0; i < input.length; i++) {
 		let row = input[i];
 
-        //Replace characters in row
-		const replacements = [
-			{ original: /[a-z]/gi, replace: '' },
-		];
-        row = replaceStrings(row, replacements);
+		//Replace characters in row
+		const replacements = [{ original: /[a-z]/gi, replace: '' }];
+		row = replaceStrings(row, replacements);
 
 		output += Number(`${row[0]}${row[row.length - 1]}`); //Add the first number and last number togehter together
 	}
@@ -32,7 +30,7 @@ function puzzle2() {
 	for (let i = 0; i < input.length; i++) {
 		let row = input[i];
 
-        //Replace characters in row
+		//Replace characters in row
 		const replacements = [
 			{ original: 'one', replace: 'one1one' },
 			{ original: 'two', replace: 'two2two' },
@@ -45,7 +43,7 @@ function puzzle2() {
 			{ original: 'nine', replace: 'nine9nine' },
 			{ original: /[a-z]/gi, replace: '' },
 		];
-        row = replaceStrings(row, replacements);
+		row = replaceStrings(row, replacements);
 
 		output += Number(`${row[0]}${row[row.length - 1]}`); //Add the first number and last number togehter together
 	}
@@ -54,12 +52,12 @@ function puzzle2() {
 	console.log(`Puzzle 2: ${output}`);
 }
 
-function replaceStrings (input, cases) {
-    for (let i = 0; i < cases.length; i++) {
-        const element = cases[i];
-        input = input.replaceAll(element.original, element.replace);
-    }
-    return input;
+function replaceStrings(input, cases) {
+	for (let i = 0; i < cases.length; i++) {
+		const element = cases[i];
+		input = input.replaceAll(element.original, element.replace);
+	}
+	return input;
 }
 
 module.exports = { puzzle1, puzzle2 };
