@@ -1,0 +1,24 @@
+{
+	"name": "adventofcode2023",
+	"version": "1.0.0",
+	"description": "My solutions to the Advent of Code 2023 (https://adventofcode.com/2023)",
+	"main": "index.js",
+	"scripts": {
+		"start": "node index.js",
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"day1": "npx run-func days/day1.js puzzle1 && npx run-func days/day1.js puzzle2",
+		"day2": "npx run-func days/day2.js puzzle1 && npx run-func days/day2.js puzzle2",
+		"day3": "npx run-func days/day3.js puzzle1 && npx run-func days/day3.js puzzle2",
+		"day4": "npx run-func days/day4.js puzzle1 && npx run-func days/day4.js puzzle2",
+		"day5": "npx run-func days/day5.js puzzle1 && npx run-func days/day5.js puzzle2"
+	},
+	"keywords": [
+		"AdventOfCode",
+		"AoC"
+	],
+	"author": "xHeitkamp(Robin Behlke)",
+	"license": "MIT",
+	"dependencies": {
+		"fs": "^0.0.1-security"
+	}
+}
