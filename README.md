@@ -27,8 +27,8 @@ npm run day1
 
 | Day | Puzzle 1 (time) | Puzzle 2 (time) |
 |:-:|:-:|:-:|
-| 1 | ⭐️ (~2ms) | ⭐️ (~6.8ms)|
-| 2 | ⭐️ (~1.4ms) | ⭐️ (~1.4ms)|
+| [1](days/day1.js) | ⭐️ (~2ms) | ⭐️ (~6.8ms)|
+| [2](days/day2.js) | ⭐️ (~1.4ms) | ⭐️ (~1.4ms)|
 | 3 |  |  |
 | 4 |  |  |
 | 5 |  |  |
