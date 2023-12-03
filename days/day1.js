@@ -1,5 +1,5 @@
 // Modules
-const helpers = require('../helpers/helpers');
+const helpers = require('../helpers');
 
 function puzzle1() {
 	//Default variables
@@ -18,7 +18,8 @@ function puzzle1() {
 	}
 
 	//Output auf solution
-	console.log(`Puzzle 1: ${output}`);
+	// console.log(`Puzzle 1: ${output}`);
+	return output;
 }
 
 function puzzle2() {
@@ -49,7 +50,7 @@ function puzzle2() {
 	}
 
 	//Output auf solution
-	console.log(`Puzzle 2: ${output}`);
+	return output;
 }
 
 function replaceStrings(input, cases) {

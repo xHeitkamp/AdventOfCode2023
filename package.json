@@ -1,7 +1,8 @@
 {
 	"name": "adventofcode2023",
 	"version": "1.0.0",
-	"description": "My solutions to the Advent of Code 2023 (https://adventofcode.com/2023)",
+	"description": "These are my solutions in JavaScript of the Advent of Code in 2023. Have a wonderful christmas! 🎄🎄🎄",
+	"homepage": "https://github.com/xHeitkamp/AdventOfCode2023",
 	"main": "index.js",
 	"scripts": {
 		"start": "node index.js",
@@ -10,15 +11,34 @@
 		"day2": "npx run-func days/day2.js puzzle1 && npx run-func days/day2.js puzzle2",
 		"day3": "npx run-func days/day3.js puzzle1 && npx run-func days/day3.js puzzle2",
 		"day4": "npx run-func days/day4.js puzzle1 && npx run-func days/day4.js puzzle2",
-		"day5": "npx run-func days/day5.js puzzle1 && npx run-func days/day5.js puzzle2"
+		"day5": "npx run-func days/day5.js puzzle1 && npx run-func days/day5.js puzzle2",
+		"day6": "npx run-func days/day6.js puzzle1 && npx run-func days/day6.js puzzle2",
+		"day7": "npx run-func days/day7.js puzzle1 && npx run-func days/day7.js puzzle2",
+		"day8": "npx run-func days/day8.js puzzle1 && npx run-func days/day8.js puzzle2",
+		"day9": "npx run-func days/day9.js puzzle1 && npx run-func days/day9.js puzzle2",
+		"day10": "npx run-func days/day10.js puzzle1 && npx run-func days/day10.js puzzle2",
+		"day11": "npx run-func days/day11.js puzzle1 && npx run-func days/day11.js puzzle2",
+		"day12": "npx run-func days/day12.js puzzle1 && npx run-func days/day12.js puzzle2",
+		"day13": "npx run-func days/day13.js puzzle1 && npx run-func days/day13.js puzzle2",
+		"day14": "npx run-func days/day14.js puzzle1 && npx run-func days/day14.js puzzle2",
+		"day15": "npx run-func days/day15.js puzzle1 && npx run-func days/day15.js puzzle2",
+		"day16": "npx run-func days/day16.js puzzle1 && npx run-func days/day16.js puzzle2",
+		"day17": "npx run-func days/day17.js puzzle1 && npx run-func days/day17.js puzzle2",
+		"day18": "npx run-func days/day18.js puzzle1 && npx run-func days/day18.js puzzle2",
+		"day19": "npx run-func days/day19.js puzzle1 && npx run-func days/day19.js puzzle2",
+		"day20": "npx run-func days/day20.js puzzle1 && npx run-func days/day20.js puzzle2",
+		"day21": "npx run-func days/day21.js puzzle1 && npx run-func days/day21.js puzzle2",
+		"day22": "npx run-func days/day22.js puzzle1 && npx run-func days/day22.js puzzle2",
+		"day23": "npx run-func days/day23.js puzzle1 && npx run-func days/day23.js puzzle2",
+		"day24": "npx run-func days/day24.js puzzle1 && npx run-func days/day24.js puzzle2",
+		"day25": "npx run-func days/day25.js puzzle1 && npx run-func days/day25.js puzzle2"
 	},
 	"keywords": [
-		"AdventOfCode",
-		"AoC"
+		"advent-of-code",
+		"advent-of-code-2023",
+		"aoc",
+		"aoc-2023"
 	],
 	"author": "xHeitkamp(Robin Behlke)",
-	"license": "MIT",
-	"dependencies": {
-		"fs": "^0.0.1-security"
-	}
+	"license": "MIT"
 }

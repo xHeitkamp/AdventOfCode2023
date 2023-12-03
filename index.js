@@ -1,6 +1,5 @@
 // Days
-const day1 = require('./days/day1');
-const day2 = require('./days/day2');
+const days = require('./days');
 
 console.log(`
 *********************************************************\n
@@ -14,10 +13,10 @@ console.log(`
 *********************************************************
 `);
 
-console.log('***** Day1 *****');
-day1.puzzle1();
-day1.puzzle2();
-
-console.log('***** Day2 *****');
-day2.puzzle1();
-day2.puzzle2();
+for (let day in days) {
+	console.log(
+		`***** ${day[0].toUpperCase() + day.slice(1, 3)} ${day.slice(3)} *****`
+	);
+	console.log(`Puzzle 1: ${days[day].puzzle1()}`);
+	console.log(`Puzzle 2: ${days[day].puzzle2()}`);
+}

@@ -1,5 +1,5 @@
 // Modules
-const helpers = require('../helpers/helpers');
+const helpers = require('../helpers');
 
 function puzzle1() {
     //Default variables
@@ -10,7 +10,7 @@ function puzzle1() {
     output = input.length;
 
     //Output auf solution
-    console.log(`Puzzle 1: ${ output }`);
+    return output;
 }
 
 function puzzle2() {
@@ -22,7 +22,7 @@ function puzzle2() {
     output = input.length;
 
     //Output auf solution
-    console.log(`Puzzle 2: ${ output }`);
+    return output;
 }
 
 module.exports = { puzzle1, puzzle2 };
