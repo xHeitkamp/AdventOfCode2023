@@ -1,7 +1,7 @@
 // Modules
 const fs = require('fs');
 
-function getInput(filename, split) {
+function getFileWithSplit(filename, split) {
     //Read file
     const data = fs.readFileSync(`./inputs/${ filename }`, 'utf8');
     const stream = data.split(`${ split }`);
@@ -9,4 +9,4 @@ function getInput(filename, split) {
     return stream;
 }
 
-module.exports = { getInput };
+module.exports = { getFileWithSplit };

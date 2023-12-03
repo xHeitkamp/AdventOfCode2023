@@ -3,35 +3,34 @@ const helpers = require('../helpers');
 
 function puzzle1() {
 	//Default variables
-	const input = helpers.fileHandler.getInput('Day1.txt', '\n');
+	const input = helpers.fileHandler.getFileWithSplit('Day1.txt', '\n');
 	let output = 0;
 
 	//Puzzle solving
 	for (let i = 0; i < input.length; i++) {
 		let row = input[i];
 
-		//Replace characters in row
+		//Remove characters in row
 		const replacements = [{ original: /[a-z]/gi, replace: '' }];
 		row = replaceStrings(row, replacements);
 
 		output += Number(`${row[0]}${row[row.length - 1]}`); //Add the first number and last number togehter together
 	}
 
-	//Output auf solution
-	// console.log(`Puzzle 1: ${output}`);
+	//Output of solution
 	return output;
 }
 
 function puzzle2() {
 	//Default variables
-	const input = helpers.fileHandler.getInput('Day1.txt', '\n');
+	const input = helpers.fileHandler.getFileWithSplit('Day1.txt', '\n');
 	let output = 0;
 
 	//Puzzle solving
 	for (let i = 0; i < input.length; i++) {
 		let row = input[i];
 
-		//Replace characters in row
+		//Replace findings in row and remove characters
 		const replacements = [
 			{ original: 'one', replace: 'one1one' },
 			{ original: 'two', replace: 'two2two' },
@@ -49,14 +48,13 @@ function puzzle2() {
 		output += Number(`${row[0]}${row[row.length - 1]}`); //Add the first number and last number togehter together
 	}
 
-	//Output auf solution
+	//Output of solution
 	return output;
 }
 
 function replaceStrings(input, cases) {
 	for (let i = 0; i < cases.length; i++) {
-		const element = cases[i];
-		input = input.replaceAll(element.original, element.replace);
+		input = input.replaceAll(cases[i].original, cases[i].replace);
 	}
 	return input;
 }
