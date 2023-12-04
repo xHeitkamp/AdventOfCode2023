@@ -1,5 +1,6 @@
 // Days
 const days = require('../days');
+const { performance } = require('perf_hooks');
 
 const valid_arguments = 3;
 const args = process.argv.slice(2); // Get the command-line arguments
@@ -13,36 +14,38 @@ if (args.length === 0 || args.length > valid_arguments) {
 }
 
 // Extract the arguments
-const day = parseInt(args[0]);
-const puzzle = parseInt(args[1]);
-const performance = Boolean(args[2]);
+const dayArg = parseInt(args[0]);
+const puzzleArg = parseInt(args[1]);
+const performanceArg = Boolean(args[2]);
 
 // Check if the arguments are valid numbers
-if (isNaN(day) || day < 1 || day > 25) {
+if (isNaN(dayArg) || dayArg < 1 || dayArg > 25) {
 	console.log('Invalid argument. Please set <day> as a valid number.');
 	process.exit(1);
 }
-if ((isNaN(puzzle) && args.length < 1) || puzzle < 1 || puzzle > 2) {
+if ((isNaN(puzzleArg) && args.length < 1) || puzzleArg < 1 || puzzleArg > 2) {
 	console.log('Invalid argument. Please set <puzzle> as a valid number.');
 	process.exit(1);
 }
 
 let outputString = '';
-const dayRequire = `day${day}`;
+const dayRequire = `day${dayArg}`;
 
-const startTimer = Date.now();
-if (isNaN(puzzle)) {
+const startTimer = performance.now();
+if (isNaN(puzzleArg)) {
 	outputString += `Puzzle 1: ${days[dayRequire].puzzle1()}\n`;
 	outputString += `Puzzle 2: ${days[dayRequire].puzzle2()}\n`;
-} else if (puzzle === 1) {
+} else if (puzzleArg === 1) {
 	outputString += `Puzzle 1: ${days[dayRequire].puzzle1()}\n`;
-} else if (puzzle === 2) {
+} else if (puzzleArg === 2) {
 	outputString += `Puzzle 2: ${days[dayRequire].puzzle2()}\n`;
 }
-const stopTimer = Date.now();
+const stopTimer = performance.now();
 
-if (performance) {
-	outputString += `Execution time: ${stopTimer - startTimer}ms`;
+if (performanceArg) {
+	outputString += `Execution time: ${parseFloat(
+		stopTimer - startTimer
+	).toFixed(4)}ms`;
 }
 
 console.log(outputString);
