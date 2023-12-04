@@ -20,3 +20,5 @@ for (let day in days) {
 	console.log(`Puzzle 1: ${days[day].puzzle1()}`);
 	console.log(`Puzzle 2: ${days[day].puzzle2()}`);
 }
+
+console.log(`\n🎄 Wishing you bug-free days and silent nights of code delight! Happy coding and Merry Christmas! 🎅🎁\n`)

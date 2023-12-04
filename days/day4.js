@@ -7,7 +7,6 @@ function puzzle1() {
 	let output = 0;
 
 	//Puzzle solving
-	console.time('4-1');
 	for (let i = 0; i < input.length; i++) {
 		const row = input[i];
 		const numbers = row
@@ -21,7 +20,6 @@ function puzzle1() {
 		const duplicatesCount = duplicates.length - 1;
 		if (duplicatesCount >= 0) output += Math.pow(2, duplicatesCount);
 	}
-	console.timeEnd('4-1');
 
 	//Output of solution
 	return output;
@@ -33,7 +31,6 @@ function puzzle2() {
 	let output = 0;
 
 	//Puzzle solving
-	console.time('4-2');
 	//Create games
 	const games = [];
 	for (let i = 0; i < input.length; i++) {
@@ -68,7 +65,6 @@ function puzzle2() {
 	//Get output
 	output = games.reduce((acc, curr) => acc + curr.copies, 0);
 
-	console.timeEnd('4-2');
 	//Output of solution
 	return output;
 }

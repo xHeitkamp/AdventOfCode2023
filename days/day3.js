@@ -8,7 +8,6 @@ function puzzle1() {
 	let output = 0;
 
 	//Puzzle solving
-	console.time('3-1');
 	const regexFindNumber = /\d+/g;
 	const regexFindSymbol = /[^.\d]/;
 	for (let rowIndex = 0; rowIndex < input.length; rowIndex++) {
@@ -66,8 +65,6 @@ function puzzle1() {
 			}
 		}
 	}
-
-	console.timeEnd('3-1');
 
 	//Output of solution
 	return output;
