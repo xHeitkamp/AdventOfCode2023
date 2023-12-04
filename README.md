@@ -17,10 +17,15 @@ npm install
 npm run start
 ```
 
-If you want to run a single day. In this example I want to see the solutions of day 1:
+If you want to run a single day or a single puzzle. In this example I want to see the solutions of day 1:
 
 ```bash
-npm run day1
+npm run day <day> <puzzle> <performance>
+
+#Examples
+npm run day 2           #Runs Day2 with both puzzles
+npm run day 2 1         #Runs Day2 Puzzle1
+npm run day 2 1 true    #Runs Day2 Puzzle1 and logs the time in ms
 ```
 
 ## Days
