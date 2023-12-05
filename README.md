@@ -36,7 +36,7 @@ npm run day 2 1 true    #Runs Day2 Puzzle1 and logs the time in ms
 | [2](days/day2.js) | ⭐️ (~1.4ms) | ⭐️ (~1.4ms)|
 | [3](days/day3.js) | ⭐️ (~1ms) | ⭐️ (~14ms) |
 | [4](days/day4.js) | ⭐️ (~3.4ms) | ⭐️ (~2.9ms) |
-| 5 |  |  |
+| [5](days/day5.js) | ⭐️ (~1.1ms) |  |
 | 6 |  |  |
 | 7 |  |  |
 | 8 |  |  |
