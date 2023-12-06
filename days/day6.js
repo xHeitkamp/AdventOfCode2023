@@ -12,18 +12,14 @@ function puzzle1() {
 	const distances = input[1].match(/[\d]+/g).map(Number);
 
 	for (let index = 0; index < times.length; index++) {
-		const time = times[index];
-		const distance = distances[index];
-		let wins = 0;
+		const p = times[index];
+		const q = distances[index];
+		const zeropoints = pqFormula(p,q);
 
-		for (let holdTheButton = 1; holdTheButton < time; holdTheButton++) {
-			const speed = holdTheButton;
-			const raceTime = time - holdTheButton;
-			const travelledDistance = speed * raceTime;
-			if (travelledDistance > distance) wins++;
-		}
+		let win = Math.floor(zeropoints.x2) - Math.floor(zeropoints.x1);
+		if (zeropoints.x2 % 1 === 0 ) win -= 1
 
-		ways2beat.push(wins);
+		ways2beat.push(win);
 	}
 
 	//Output of solution
@@ -34,21 +30,24 @@ function puzzle1() {
 function puzzle2() {
 	//Default variables
 	const input = helpers.fileHandler.getFileWithSplit('Day6.txt', '\n');
-	let output = 0;
+	let output = 1;
 
 	//Puzzle solving
-	const time = Number(input[0].match(/[\d]+/g).join(''));
-	const distance = Number(input[1].match(/[\d]+/g).join(''));
-
-	for (let holdTheButton = 1; holdTheButton < time; holdTheButton++) {
-		const speed = holdTheButton;
-		const raceTime = time - holdTheButton;
-		const travelledDistance = speed * raceTime;
-		if (travelledDistance > distance) output++;
-	}
+	const p = Number(input[0].match(/[\d]+/g).join(''));
+	const q = Number(input[1].match(/[\d]+/g).join(''));
+	const zeropoints = pqFormula(p,q);
+	
+	output = Math.floor(zeropoints.x2) - Math.floor(zeropoints.x1);
 
 	//Output of solution
 	return output;
+}
+
+
+function pqFormula(p,q) {
+	const x1 = p / 2 - Math.sqrt(Math.pow(p / 2, 2) - q);
+	const x2 = p / 2 + Math.sqrt(Math.pow(p / 2, 2) - q);
+	return {x1,x2};
 }
 
 module.exports = { puzzle1, puzzle2 };
