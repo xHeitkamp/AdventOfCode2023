@@ -32,13 +32,13 @@ npm run day 2 1 true    #Runs Day2 Puzzle1 and logs the time in ms
 
 | Day | Puzzle 1 (time) | Puzzle 2 (time) |
 |:-:|:-:|:-:|
-| [1](days/day1.js) | ⭐️ (~2ms) | ⭐️ (~6.8ms)|
-| [2](days/day2.js) | ⭐️ (~1.4ms) | ⭐️ (~1.4ms)|
-| [3](days/day3.js) | ⭐️ (~1ms) | ⭐️ (~14ms) |
-| [4](days/day4.js) | ⭐️ (~3.4ms) | ⭐️ (~2.9ms) |
-| [5](days/day5.js) | ⭐️ (~1.1ms) |  |
-| [6](days/day6.js) | ⭐️ (~0.4ms) | ⭐️ (~0.4ms) |
-| 7 |  |  |
+| [1 - Trebuchet?!](days/day1.js) | ⭐️ (~2ms) | ⭐️ (~6.8ms)|
+| [2 - Cube Conundrum](days/day2.js) | ⭐️ (~1.4ms) | ⭐️ (~1.4ms)|
+| [3 - Gear Ratios](days/day3.js) | ⭐️ (~1ms) | ⭐️ (~14ms) |
+| [4 - Scratchcards](days/day4.js) | ⭐️ (~3.4ms) | ⭐️ (~2.9ms) |
+| [5 - If You Give A Seed A Fertilizer](days/day5.js) | ⭐️ (~1.1ms) |  |
+| [6 - Wait For It](days/day6.js) | ⭐️ (~0.4ms) | ⭐️ (~0.4ms) |
+| [7 - Camel Cards](days/day7.js) | ⭐️ (~8.9ms) | ⭐️ (~9.2ms) |
 | 8 |  |  |
 | 9 |  |  |
 | 10 |  |  |
