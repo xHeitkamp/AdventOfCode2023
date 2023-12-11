@@ -39,7 +39,7 @@ npm run day 2 1 true    #Runs Day2 Puzzle1 and logs the time in ms
 | [5 - If You Give A Seed A Fertilizer](days/day5.js) | ⭐️ (~1.1ms) |  |
 | [6 - Wait For It](days/day6.js) | ⭐️ (~0.4ms) | ⭐️ (~0.4ms) |
 | [7 - Camel Cards](days/day7.js) | ⭐️ (~8.9ms) | ⭐️ (~9.2ms) |
-| [8 - Haunted Wasteland](days/day8.js) | ⭐️ (~5.4ms) | |
+| [8 - Haunted Wasteland](days/day8.js) | ⭐️ (~5.4ms) | ⭐️ (~9.6ms) |
 | [9 - Mirage Maintenance](days/day9.js) | ⭐️ (~13.2ms) | ⭐️ (~11.8ms) |
 | 10 |  |  |
 | 11 |  |  |

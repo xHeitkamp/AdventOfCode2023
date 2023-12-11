@@ -1,5 +1,6 @@
 // Modules
 const helpers = require('../helpers');
+const lcm = require('compute-lcm');
 
 function puzzle1() {
 	//Default variables
@@ -9,12 +10,12 @@ function puzzle1() {
 	//Puzzle solving
 	const { instructions, documents } = inputParser(input);
 	let steps = 0;
-	let currentNote = 'AAA';
-	do {
+	let currentNode = 'AAA';
+	while (currentNode !== 'ZZZ') {
 		const navigation = instructions[steps % instructions.length];
-		currentNote = documents[currentNote][navigation];
+		currentNode = documents[currentNode][navigation];
 		steps++;
-	} while (currentNote !== 'ZZZ');
+	}
 	output = steps;
 
 	//Output of solution
@@ -28,21 +29,21 @@ function puzzle2() {
 
 	//Puzzle solving
 	const { instructions, documents } = inputParser(input);
-	let steps = 0;
-	let currentNotes = Object.keys(documents).filter(
-		(ele) => ele.charAt(2) === 'A'
+	const startingNodes = Object.keys(documents).filter((ele) =>
+		ele.endsWith('A')
 	);
-	while (
-		currentNotes.filter((ele) => ele.charAt(2) === 'Z').length !==
-		currentNotes.length
-	) {
-		const navigation = instructions[steps % instructions.length];
-		for (let index = 0; index < currentNotes.length; index++) {
-			currentNotes[index] = documents[currentNotes[index]][navigation];
+	const steps = [];
+	for (let index = 0; index < startingNodes.length; index++) {
+		let step = 0;
+		let currentNode = startingNodes[index];
+		while (!currentNode.endsWith('Z')) {
+			const instruction = instructions[step % instructions.length];
+			currentNode = documents[currentNode][instruction];
+			step++;
 		}
-		steps++;
+		steps.push(step);
 	}
-	output = steps;
+	output = lcm(...steps);
 
 	//Output of solution
 	return output;
